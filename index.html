@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星 賢志様 専用 - morich 転職案件紹介</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 3px solid #E60012;
+            margin-bottom: 30px;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            height: 50px;
+        }
+        
+        .candidate-name {
+            color: #E60012;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        nav {
+            background: #E60012;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .company-section {
+            background: white;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .company-header {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .position-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            background: #E60012;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .company-name {
+            font-size: 36px;
+            font-weight: 900;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .corporate-overview {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .overview-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1976d2;
+        }
+        
+        .overview-table {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        .overview-label {
+            font-weight: 700;
+            color: #555;
+        }
+        
+        .overview-value {
+            color: #333;
+        }
+        
+        .company-content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid #E60012;
+            padding-bottom: 5px;
+        }
+        
+        .accordion {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-header {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .accordion-header:hover {
+            background: #e9ecef;
+        }
+        
+        .accordion-content {
+            display: none;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .accordion-content.active {
+            display: block;
+        }
+        
+        .accordion-arrow {
+            transition: transform 0.3s;
+        }
+        
+        .accordion-arrow.active {
+            transform: rotate(180deg);
+        }
+        
+        .morich-point {
+            background: #fff5f5;
+            border: 2px solid #E60012;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .morich-point-title {
+            color: #E60012;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .external-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .external-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .external-link:hover {
+            background: #0056b3;
+        }
+        
+        .job-section {
+            border-top: 2px solid #f0f0f0;
+            padding-top: 30px;
+        }
+        
+        .job-accordion {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .job-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            cursor: pointer;
+        }
+        
+        .job-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .job-summary {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .job-content {
+            display: none;
+            padding: 25px;
+        }
+        
+        .job-content.active {
+            display: block;
+        }
+        
+        .job-detail {
+            margin-bottom: 20px;
+        }
+        
+        .job-detail-title {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .job-detail-content {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .requirement-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .must-tag {
+            background: #dc3545;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .want-tag {
+            background: #28a745;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .work-conditions {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .condition-grid {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        .condition-label {
+            font-weight: 700;
+            color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .company-name {
+                font-size: 28px;
+            }
+            
+            .overview-table {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .condition-grid {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="morich_logo.jpg" alt="morich" class="logo">
+                <div class="candidate-name">星 賢志様 専用案件</div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="#albalink">AlbaLink</a>
+                <a href="#bengo4">弁護士ドットコム</a>
+                <a href="#shift-ai">SHIFT AI</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="albalink" class="company-section">
+            <div class="company-header">
+                <div class="position-tags">
+                    <span class="tag">マーケティング部長候補</span>
+                    <span class="tag">東証グロース</span>
+                    <span class="tag">社長リレーション</span>
+                    <span class="tag">CMO候補</span>
+                </div>
+                <h1 class="company-name">株式会社AlbaLink（アルバリンク）</h1>
+                <div class="corporate-overview">
+                    <div class="overview-title">Corporate Overview</div>
+                    <div class="overview-table">
+                        <div class="overview-label">本社所在地</div>
+                        <div class="overview-value">〒135-0042 東京都江東区木場二丁目17番16号 BESIDE KIBA 3階</div>
+                        <div class="overview-label">上場区分</div>
+                        <div class="overview-value">東証グロース</div>
+                        <div class="overview-label">企業URL</div>
+                        <div class="overview-value">https://albalink.co.jp/</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="company-content">
+                <div class="section">
+                    <h2 class="section-title">企業紹介</h2>
+                    <div class="accordion">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <div>
+                                <strong>「空き家をゼロにする」をミッションに掲げ、空き家や再建築不可物件、共有持分不動産、心理的瑕疵物件など、一般的な不動産会社では扱いづらい"訳あり不動産"を専門に買い取り、再流通させる事業を展開...</strong>
+                            </div>
+                            <span class="accordion-arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>「空き家をゼロにする」をミッションに掲げ、空き家や再建築不可物件、共有持分不動産、心理的瑕疵物件など、一般的な不動産会社では扱いづらい"訳あり不動産"を専門に買い取り、再流通させる事業を展開しています。不動産業界の中でもニッチながら社会的意義の高い領域に挑み、わずか4名で始めた事業は、160名規模へと急拡大。全国19拠点、年間約3,000件の販売を行っており、2025年12月には東京証券取引所グロース市場へ上場（TOKYO PRO Marketからの鞍替え上場）しています。</p>
+                            <br>
+                            <p>特長はマーケティング起点のビジネスモデル。代表の河田氏はインターネット広告出身で、創業時からデジタルマーケティングを強みとし、2023年には運営メディア経由で6,400件を超える年間問い合わせを獲得しています。今後は、さらなる支店拡大とともに、営業部門の強化、企画部門における事業推進人材、経営管理機能の強化に向けてた経営に近い意思決定層の採用・登用も本格化しています。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="morich-point">
+                    <div class="morich-point-title">morichオススメPoint</div>
+                    <p>★社長リレーション</p>
+                    <br>
+                    <p>2023年にTOKYO PRO Market、2025年12月には東京証券取引所グロース市場へ上場されました。今後は次なる目標である47都道府県への支店展開を目指し、施策を進めています。全国各地で「空き家と言えばAlbaLink」という第一想起が取れる状態を目指しており、創業メンバーがマーケターとしての起業経験・経営経験のあるメンバーで構成されているため、マーケティング戦略を中心に事業拡大しており、入社時点で問い合わせ反響が獲得できる体制になっています。またサステナビリティへの取り組みとして、既存不動産ストックの有効活用を軸に環境負荷の低減と地域活性化を両立する循環型ビジネスを推進。成長市場の中で事業・組織の拡張を加速し、社会課題解決と企業成長を高次元で実現する企業です。事業の急成長に伴い、経営直下で横断的に機能を統括できる人材の必要性が増しており、「経営視点での仕組み作り」「マルチな視点を持つ事業責任者」など、経営幹部候補を積極的に募集中です。</p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">代表プロフィール</h2>
+                    <p><strong>代表取締役　河田 憲二氏</strong><br>
+                    1987年生まれ。2007年頃からSEO対策を主としたwebマーケティングに携わり、2014年個人事業主としてwebマーケティングを起点とする事業「株式会社グリーンライト」を創業。法律に特化したメディア「債務整理の森」を立ち上げ、不動産賃貸業にも着手し、さまざまな物件再生を手掛ける。2019年に債務整理の森を上場企業に売却し、株式会社ルームセレクトを買収。社名を株式会社AlbaLinkと変更し、訳あり物件の買取再販業をスタート。</p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">外部リンク</h2>
+                    <div class="external-links">
+                        <a href="https://albalink.co.jp/" class="external-link" target="_blank">企業サイト</a>
+                        <a href="https://www.youtube.com/watch?v=N7X11o4jarw&t=443s" class="external-link" target="_blank">会社紹介動画</a>
+                        <a href="https://youtu.be/czcDcD5N038?si=EdHYxKYZpUOaUzAa" class="external-link" target="_blank">入社研修動画</a>
+                    </div>
+                </div>
+
+                <div class="job-section">
+                    <h2 class="section-title">募集ポジション</h2>
+                    
+                    <div class="job-accordion">
+                        <div class="job-header" onclick="toggleJobAccordion(this)">
+                            <div>
+                                <div class="job-title">マーケティング部長候補</div>
+                                <div class="job-summary">オンラインチャネルからの顧客獲得最大化とブランド認知向上を牽引</div>
+                            </div>
+                            <span class="accordion-arrow">▼</span>
+                        </div>
+                        <div class="job-content">
+                            <div class="job-detail">
+                                <div class="job-detail-title">募集背景</div>
+                                <div class="job-detail-content">
+                                    当社は現在、事業のさらなる成長期にあり、特にオンラインチャネルを通じた顧客獲得とブランド認知度向上が喫緊の課題となっています。これまでもデジタルマーケティングには注力してきましたが、市場の変化と競合の激化に伴い、より戦略的かつ効果的なアプローチが求められています。既存のマーケティング部門は、各メンバーが専門性を持ちながらも、組織全体としての連携強化と、データに基づいた意思決定プロセスの確立が不可欠です。<br><br>
+
+                                    この度、私たちは「マーケティング部長」を募集します。このポジションは、当社のオンラインチャネルからの顧客獲得を最大化し、ブランド認知度を飛躍的に向上させるための中心的な役割を担います。具体的には、デジタルマーケティング戦略の立案から実行、効果測定、改善までを一貫してリードし、部門全体のパフォーマンスを最大化していただきます。また、マーケティング部門の組織体制を強化し、メンバーの育成を通じて強力なリーダーシップを発揮していただくことも期待しています。<br><br>
+
+                                    データドリブンな意思決定を推進し、マーケティング活動のROIを最大化することで、当社の持続的な事業成長を加速させる重要なミッションです。市場のトレンドを捉え、革新的なアイデアで当社のマーケティングを次のステージへと引き上げてくださる方を心よりお待ちしております。
+                                </div>
+                            </div>
+
+                            <div class="job-detail">
+                                <div class="job-detail-title">業務内容</div>
+                                <div class="job-detail-content">
+                                    当社のオンラインチャネルからの顧客獲得最大化とブランド認知向上を牽引していただきます。デジタルマーケティング戦略の立案から実行、効果検証までを一貫して統括し、Web広告、SEO/SEM、アクセス解析などを駆使してデータドリブンなマーケティング活動を推進します。また、マーケティング部門全体の組織体制強化とリーダーシップを発揮し、5名以上のチームをマネジメントしながらメンバーの育成にも貢献していただきます。KPI設定と進捗管理を通じて事業成長を加速させ、将来的にはCMO候補として、当社のマーケティング戦略全体をリードする役割を担うことを期待しています。<br><br>
+
+                                    ・オンラインチャネルからの顧客獲得を最大化するデジタルマーケティング戦略の立案と実行<br>
+                                    ・Web広告（リスティング、SNS広告等）やSEO/SEM施策の企画・運用・最適化<br>
+                                    ・アクセス解析ツールを用いたデータ分析に基づいたマーケティング効果の改善提案<br>
+                                    ・マーケティング部門全体の統括、組織体制強化、メンバーの育成とマネジメント<br>
+                                    ・マーケティングKPIの設定、進捗管理、予算策定と効果的な配分管理<br>
+                                    ・ブランド認知向上と顧客エンゲージメント強化のための戦略策定と推進<br>
+                                    ・事業目標達成に向けた社内外ステークホルダーとの連携強化と調整
+                                </div>
+                            </div>
+
+                            <div class="job-detail">
+                                <div class="job-detail-title">応募資格</div>
+                                <div class="job-detail-content">
+                                    <div class="requirement-tags">
+                                        <span class="must-tag">MUST</span>
+                                    </div>
+                                    ・デジタルマーケティング戦略の立案・実行経験<br>
+                                    ・5名以上のマーケティングチームマネジメント経験<br>
+                                    ・Web広告運用・最適化の実務経験5年以上<br>
+                                    ・SEO/SEMに関する深い知識と実践経験<br>
+                                    ・アクセス解析ツールを用いたデータ分析・改善経験<br>
+                                    ・KPI設定と進捗管理、レポーティング実務経験<br><br>
+
+                                    <div class="requirement-tags">
+                                        <span class="want-tag">WANT</span>
+                                    </div>
+                                    ・高度なWeb広告運用戦略の立案・実行経験<br>
+                                    ・BIツールを活用したデータ分析・改善提案経験<br>
+                                    ・ブランド戦略の立案から実行までの一連の経験<br>
+                                    ・新規事業やプロダクトのマーケティング立ち上げ経験<br>
+                                    ・MA/CRMツールを用いた顧客育成・LTV向上経験<br>
+                                    ・広報・PR戦略の企画・実行を通じたブランド認知向上経験
+                                </div>
+                            </div>
+
+                            <div class="job-detail">
+                                <div class="job-detail-title">求める人物像</div>
+                                <div class="job-detail-content">
+                                    当社のマーケティング部門を牽引し、オンラインチャネルからの顧客獲得とブランド認知向上を最大化できる方を求めています。高いリーダーシップを発揮し、データドリブンな意思決定を通じて事業成長を加速させることに強いコミットメントを持ち、目標達成に執着できる方を歓迎します。常に変化するデジタルマーケティングの最前線を捉え、新たな戦略を立案・実行できる探求心と実行力を持ち、困難な課題に対しても前向きに取り組み、粘り強く解決策を導き出すことができる方。社内外の関係者と円滑なコミュニケーションを築き、部門間の連携を強化しながら、チームを成功に導ける方を期待しています。
+                                </div>
+                            </div>
+
+                            <div class="work-conditions">
+                                <div class="condition-grid">
+                                    <div class="condition-label">勤務地</div>
+                                    <div>東京</div>
+                                    <div class="condition-label">リモートワーク</div>
+                                    <div>基本出社</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bengo4" class="company-section">
+            <div class="company-header">
+                <div class="position-tags">
+                    <span class="tag">マーケティング部長候補</span>
+                    <span class="tag">東証プライム</span>
+                    <span class="tag">役員リレーション</span>
+                    <span class="tag">toCメディア</span>
+                </div>
+                <h1 class="company-name">弁護士ドットコム株式会社</h1>
+                <div class="corporate-overview">
+                    <div class="overview-title">Corporate Overview</div>
+                    <div class="overview-table">
+                        <div class="overview-label">本社所在地</div>
+                        <div class="overview-value">〒106-0032 東京都港区六本木四丁目1番4号 黒崎ビル6階</div>
+                        <div class="overview-label">上場区分</div>
+                        <div class="overview-value">東証プライム</div>
+                        <div class="overview-label">企業URL</div>
+                        <div class="overview-value">https://corporate.bengo4.com/corporate/</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="company-content">
+                <div class="section">
+                    <h2 class="section-title">企業紹介</h2>
+                    <div class="accordion">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <div>
+                                <strong>弁護士ドットコムは、「プロフェッショナルテック」で次の常識をつくる企業として、法律をもっと身近にするという創業当初から変わらないミッションを追求し続けています...</strong>
+                            </div>
+                            <span class="accordion-arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>弁護士ドットコムは、「プロフェッショナルテック」で次の常識をつくる企業として、法律をもっと身近にするという創業当初から変わらないミッションを追求し続けています。2005年に弁護士出身の元榮太一郎氏が創業して以来、現在では登録弁護士数29,000人以上、月間サイト訪問者数1,600万人を誇る日本最大級の法律ポータルサイトへと成長。特に電子契約サービス「クラウドサイン」は日本初のクラウド型電子署名サービスとして市場シェアNo.1を獲得し、グレーゾーン解消制度の活用や規制改革推進会議への参加を通じて電子契約の社会実装に大きく貢献。2023年10月には判例データベース「判例秘書」を提供する株式会社エル・アイ・シーを買収、法務領域における総合プラットフォーム企業としての地位を確立しています。</p>
+                            <br>
+                            <p>最近では、AIと法務領域を融合させた先進的な取り組みが注目され、アンダーソン・毛利・友常法律事務所やみらい翻訳と連携した国内初の法務領域マルチエージェント連携実証実験を開始し、法務業務の革新的な効率化を目指しています。また、2025年12月には東証グロースから東証プライムへの市場変更を果たし、創業20年を迎える節目の年に更なる成長ステージへと駒を進めました。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="morich-point">
+                    <div class="morich-point-title">morichオススメPoint</div>
+                    <p>★過去複数名入社実績アリ<br>
+                    ★役員リレーション<br>
+                    ★カジュアル面談スタートOK</p>
+                    <br>
+                    <p>弁護士をはじめとする専門家の知見と最先端テクノロジーを融合し、社会課題の解決に挑むプロフェッショナル・テック企業です。単なるITサービスの提供に留まらず、法曹領域という高い専門性が求められる分野で新たな仕組みを実装している点に、同社ならではの希少性があります。掲げるビジョンは「まだないやり方で、世界を前へ」。創業20周年を迎えた現在も、ベンチャー精神を失うことなく、既存の常識や業界構造そのものをアップデートし続ける姿勢が、組織全体に根付いています。また、プロダクト開発の現場では「いいものを最短距離で」「最適化し続ける」「チームとして仕事する」といった価値観が浸透しています。高い専門性を持つ人材同士が協働しながら、安定した事業基盤の上でなお挑戦を楽しみ、本質的な価値創出に向き合える環境です。CHROをはじめ、複数名の幹部メンバーがmorich経由でご入社いただいております。</p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">外部リンク</h2>
+                    <div class="external-links">
+                        <a href="https://corporate.bengo4.com/corporate/" class="external-link" target="_blank">企業サイト</a>
+                        <a href="https://www.slideshare.net/ssuser2ca81f/saiyo-vol4-20210126-241859561" class="external-link" target="_blank">採用資料</a>
+                        <a href="https://www.bengo4.com/corporate/interview/article/245mz9rvbssl/" class="external-link" target="_blank">事業紹介記事</a>
+                        <a href="https://www.wantedly.com/companies/bengo4/post_articles/972995" class="external-link" target="_blank">インタビュー記事</a>
+                        <a href="https://www.bengo4.com/corporate/interview/article/m78g4awu3j7/" class="external-link" target="_blank">税理士ドットコム紹介</a>
+                    </div>
+                </div>
+
+                <div class="job-section">
+                    <h2 class="section-title">募集ポジション</h2>
+                    
+                    <div class="job-accordion">
+                        <div class="job-header" onclick="toggleJobAccordion(this)">
+                            <div>
+                                <div class="job-title">※Confidential※マーケティング部長候補（toCメディア）</div>
+                                <div class="job-summary">弁護士ドットコム／税理士ドットコム両事業におけるメディア集客を横断的にマネジメント</div>
+                            </div>
+                            <span class="accordion-arrow">▼</span>
+                        </div>
+                        <div class="job-content">
+                            <div class="job-detail">
+                                <div class="job-detail-title">募集背景</div>
+                                <div class="job-detail-content">
+                                    弁護士ドットコム／税理士ドットコム両事業におけるメディア集客（ユーザー側）を強化するため<br><br>
+
+                                    当社は、「弁護士ドットコム」「税理士ドットコム」といった専門家とユーザーをつなぐプラットフォームを運営し、社会性の高い課題解決に貢献しています。<br><br>
+
+                                    現在、両事業で培ってきた集客の強み、すなわち弁護士ドットコムのSEOノウハウと、税理士ドットコムのPPC（リスティング広告運用）ノウハウを掛け合わせ、メディア集客の構造を次なるステージへと進化させるフェーズにあります。両事業部の強みを活かしつつ知見を掛け合わせシナジーを生み出し、戦略、組織/人材、オペレーション、チャネルなどの観点から戦略・戦術を進化させ、飛躍的な事業成長に向けた最適化を図りたいと考えています。<br><br>
+
+                                    この重要な成長戦略を牽引するため、メディアを横断的にマネジメントし、数千万円〜億単位のマーケティング予算を最適に配分・拡張できる専任担当者を募集いたします。
+                                </div>
+                            </div>
+
+                            <div class="job-detail">
+                                <div class="job-detail-title">業務内容</div>
+                                <div class="job-detail-content">
+                                    弁護士ドットコム／税理士ドットコムの両メディア横断におけるメディア集客の全体戦略立案と実行責任を担っていただきます。<br><br>
+
+                                    <strong>◆集客戦略のリード</strong><br>
+                                    ・SEO、PPC（リスティング、ディスプレイ等）の両軸統合、および最適な予算配分と戦略設計のリード<br>
+                                    ・月間数千万円規模の広告予算の計画策定・配分・管理および最適化<br>
+                                    ・ユーザー起点での最適なペルソナ設定とチャネル戦略<br><br>
+
+                                    <strong>◆グロース施策の企画・実行</strong><br>
+                                    ・媒体ポートフォリオの拡大（動画、外部媒体など）や、別LP/サイトの新設、AIを活用した施策など、新たな集客チャネルと打ち手の設計・実装を推進<br>
+                                    ・既存の特集や企画における収益最大化を目指したグロース施策の実行<br><br>
+
+                                    <strong>◆組織体制の最適化と推進</strong><br>
+                                    ・両メディアにおける施策や運用の集約化や効率化<br>
+                                    ・外部代理店のパフォーマンスコントロールと、成果最大化に向けた体制の検討と実行<br>
+                                    ・社内関係者（広告運用実務担当者、エンジニア、他事業部門等）と連携し、組織横断的な合意形成とプロジェクト推進<br><br>
+
+                                    <strong>【ポジションの魅力】</strong><br>
+                                    ・複数メディアを横断し、数千万円〜億規模の予算配分を裁量高く担える<br>
+                                    ・完成済みの運用継続ではなく、戦略策定から再構築・拡張に挑める環境<br>
+                                    ・社会貢献性の高い領域で事業インパクトとユーザー価値の両立が可能
+                                </div>
+                            </div>
+
+                            <div class="job-detail">
+                                <div class="job-detail-title">応募資格</div>
+                                <div class="job-detail-content">
+                                    <div class="requirement-tags">
+                                        <span class="must-tag">MUST</span>
+                                    </div>
+                                    ・事業会社におけるWebマーケティング経験6年以上<br>
+                                    ・PPC広告に関する深い知見とハンドリング経験<br><br>
+
+                                    上記に加え、下記いずれかの経験<br>
+                                    ・2つ以上のメディアに携わった経験（同一企業でなくとも可）<br>
+                                    ・1つのメディアを大きく変革した経験<br><br>
+
+                                    <div class="requirement-tags">
+                                        <span class="want-tag">WANT</span>
+                                    </div>
+                                    ・0→1/再設計の経験（完成した仕組みの運用最適化のみではなく、設計からの推進）<br>
+                                    ・大規模予算（月間数千万円以上）のWebマーケティング実務責任者経験<br>
+                                    ・事業計画や予算編成への関与経験（主体でなくとも可）<br>
+                                    ・プラットフォーム型ビジネスにおける集客経験<br>
+                                    ・大手バーティカルメディアなどでの集客責任者経験<br>
+                                    ・動画施策などの新媒体/新施策開拓を推進した経験<br>
+                                    ・ピープルマネジメント経験<br>
+                                    ・エンジニアや他事業部門など、組織横断でステークホルダーを巻き込み、プロジェクトを成功に導いた経験
+                                </div>
+                            </div>
+
+                            <div class="job-detail">
+                                <div class="job-detail-title">求める人物像</div>
+                                <div class="job-detail-content">
+                                    ・当社のMission/Visionへ共感いただける方<br>
+                                    ・単なる運用最適化ではなく強みを融合させ、媒体ポートフォリオの拡大、新規施策の設計など、0→1の戦略立案と実行に強い意欲をお持ちの方<br>
+                                    ・数値達成への強いドライブ力を持ち、年間数千万円〜億単位のマーケティング予算を元に事業成長をリードしたい方<br>
+                                    ・社内外の多様なステークホルダーを巻き込み、全社最適の視点で物事を自らリードできる方
+                                </div>
+                            </div>
+
+                            <div class="work-conditions">
+                                <div class="condition-grid">
+                                    <div class="condition-label">勤務地</div>
+                                    <div>東京</div>
+                                    <div class="condition-label">リモートワーク</div>
+                                    <div>基本出社</div>
+                                    <div class="condition-label">副業</div>
+                                    <div>条件によって「可」</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="shift-ai" class="company-section">
+            <div class="company-header">
+                <div class="position-tags">
+                    <span class="tag">toCマーケター</span>
+                    <span class="tag">CMO候補</span>
+                    <span class="tag">役員リレーション</span>
+                    <span class="tag">AI・テクノロジー</span>
+                </div>
+                <h1 class="company-name">株式会社SHIFT AI（シフト　エーアイ）</h1>
+                <div class="corporate-overview">
+                    <div class="overview-title">Corporate Overview</div>
+                    <div class="overview-table">
+                        <div class="overview-label">本社所在地</div>
+                        <div class="overview-value">〒150-0002 東京都渋谷区渋谷2丁目24-12 渋谷スクランブルスクエア</div>
+                        <div class="overview-label">上場区分</div>
+                        <div class="overview-value">未上場（N-2）</div>
+                        <div class="overview-label">企業URL</div>
+                        <div class="overview-value">https://shift-ai.co.jp/company/</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="company-content">
+                <div class="section">
+                    <h2 class="section-title">企業紹介</h2>
+                    <div class="accordion">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <div>
+                                <strong>株式会社SHIFT AIは、2022年3月に設立された企業で、「日本をAI先進国に」というビジョンのもと、AI関連のメディア事業・コミュニティ事業・法人事業の三本柱で事業を展開...</strong>
+                            </div>
+                            <span class="accordion-arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>株式会社SHIFT AIは、2022年3月に設立された企業で、「日本をAI先進国に」というビジョンのもと、AI関連のメディア事業・コミュニティ事業・法人事業の三本柱で事業を展開しています。生成AIをはじめとするAI技術のビジネス活用を学べる国内最大級のコミュニティ「SHIFT AI」を運営しており、会員数はすでに2万人を超えています。個人向けだけでなく、法人向けのリスキリング支援サービス「SHIFT AI for Biz」や、教育機関向けの「SHIFT AI for School」なども展開し、幅広い分野でAI人材の育成を推進しています。</p>
+                            <br>
+                            <p>また、最新のAIトレンドやツール情報を発信するメディア「SHIFT AI TIMES」を運営し、X（旧Twitter）では約10万人のフォロワーを有するほか、TikTokやYouTube、Instagramなど複数のSNSでも情報発信を行っています。法人事業では、企業向けに生成AI活用の研修から導入推進までを包括的に支援しており、これまでに2,500社以上の企業をサポート。法人向け研修事業は月次300％成長を継続するなど、急拡大フェーズにあります。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="morich-point">
+                    <div class="morich-point-title">morichオススメPoint</div>
+                    <p>★役員リレーション</p>
+                    <br>
+                    <p>AIの活用率は中国56.3%・米国46.3%に対し、日本は9%と大幅に遅れをとっている現状がありSHIFTAIのサービス拡大を通じて、年間100万人のAI人材を生み出す日本トップのAI人材育成企業を目指しています。大手エンタープライズ企業から、従業員30名くらいの地方企業まで、延べ2500社ほどの生成AI支援の実績がありマーケティングに力を入れていることもあり、引き合いは多く、今後も右肩上がりに増える見込みです。フルリモート・フルフレックス体制で、時間や場所に縛られない働き方ができ、平均年齢も36歳と子育て世代も多いカルチャーです。</p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">代表プロフィール</h2>
+                    <p><strong>代表取締役　木内 翔大氏</strong><br>
+                    1990年東京都生まれ。大学時代からフリーランスエンジニアとして活動し、2013年には日本初のマンツーマン専門プログラミングスクール「SAMURAI ENGINEER」を創業。累計4万人以上を指導した後、2022年に株式会社SHIFT AIを立ち上げ、「日本をAI先進国に」という理念のもと、AIのビジネス活用を広げる取り組みをリードされています。</p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">外部リンク</h2>
+                    <div class="external-links">
+                        <a href="https://shift-ai.co.jp/company/" class="external-link" target="_blank">企業サイト</a>
+                    </div>
+                </div>
+
+                <div class="job-section">
+                    <h2 class="section-title">募集ポジション</h2>
+                    
+                    <div class="job-accordion">
+                        <div class="job-header" onclick="toggleJobAccordion(this)">
+                            <div>
+                                <div class="job-title">toCマーケター※CMO候補</div>
+                                <div class="job-summary">国内最大級のAI活用コミュニティ「SHIFT AI」の会員数拡大戦略をリード</div>
+                            </div>
+                            <span class="accordion-arrow">▼</span>
+                        </div>
+                        <div class="job-content">
+                            <div class="job-detail">
+                                <div class="job-detail-title">募集背景</div>
+                                <div class="job-detail-content">
+                                    当社は日本のAIシフトを加速する国内最大級のAI活用コミュニティ「SHIFT AI」を運営し、生成AI業界の中で中心的なポジションを築いています。<br><br>
+
+                                    本ポジションでは国内最大級のAI活用コミュニティ「SHIFT AI」の会員数を増やすための戦略・施策を代表と伴走しつつ拡大フェーズに携わられるデジタルマーケティングの責任者（CMO）を募集します！
+                                </div>
+                            </div>
+
+                            <div class="job-detail">
+                                <div class="job-detail-title">業務内容</div>
+                                <div class="job-detail-content">
+                                    ・マーケティング全体の戦略立案・実行・改善<br>
+                                    ・デジタルマーケティング業務全般（SEO、広告運用、SNS）<br>
+                                    ・消費者の好みやトレンドを把握するマーケットリサーチ（市場調査）<br>
+                                    ・CRM施策の企画・実行・改善<br>
+                                    ・LPO施策の企画・実行・改善<br>
+                                    ・セミナーの企画運営（オンラインセミナー設計、スライド作成、各種ディレクションなど）<br>
+                                    ・マーケディング部門全体マネジメント/予算管理<br><br>
+
+                                    <strong>■このポジションの魅力</strong><br>
+                                    ・合計SNSフォロワー数50万人のインフルエンサー達がパートナーとして参加する「国内最大級のAI特化型コミュニティ」を共に作ることができる<br>
+                                    ・日本最大級AIコミュニティを運営する当社のマーケティング戦略の立案～実行まで行える<br>
+                                    ・CMOのキャリア醸成<br>
+                                    ・最新のマーケティングスキルを習得できる
+                                </div>
+                            </div>
+
+                            <div class="job-detail">
+                                <div class="job-detail-title">応募資格</div>
+                                <div class="job-detail-content">
+                                    <div class="requirement-tags">
+                                        <span class="must-tag">MUST</span>
+                                    </div>
+                                    ・3年以上のデジタルマーケティング領域での企画設計、業務経験<br>
+                                    ・広告/LINE/メルマガ/セミナー/LP/いずれかの予算管理、企画設計、ディレクション、運用経験<br>
+                                    ・メンバーマネジメント経験、組織開発経験<br><br>
+
+                                    <div class="requirement-tags">
+                                        <span class="want-tag">WANT</span>
+                                    </div>
+                                    ・Google Analyticsを用いたサイト解析等の実務経験<br>
+                                    ・マーケティング領域において、企画立案・実施・効果測定までの一連の経験<br>
+                                    ・オンラインコミュニティやSNSの運用経験<br>
+                                    ・広告の効果測定やランディングページのパフォーマンス分析の経験<br>
+                                    ・マーケティング関連ツールの利用経験<br>
+                                    ・CVRの最大化を目的としたLPOの経験<br>
+                                    ・セミナーマーケティングの戦略施策実行経験<br>
+                                    ・メンバータスクマネジメント経験
+                                </div>
+                            </div>
+
+                            <div class="job-detail">
+                                <div class="job-detail-title">求める人物像</div>
+                                <div class="job-detail-content">
+                                    ・新たなアイデアや斬新なアプローチを提案し、業務の改善に積極的に貢献できる方<br>
+                                    ・デジタルマーケティングの最新トレンドや新しいツールに興味関心を持てる方
+                                </div>
+                            </div>
+
+                            <div class="work-conditions">
+                                <div class="condition-grid">
+                                    <div class="condition-label">勤務地</div>
+                                    <div>東京</div>
+                                    <div class="condition-label">リモートワーク</div>
+                                    <div>フルリモート可</div>
+                                    <div class="condition-label">副業</div>
+                                    <div>可</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const arrow = element.querySelector('.accordion-arrow');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                arrow.classList.remove('active');
+            } else {
+                content.classList.add('active');
+                arrow.classList.add('active');
+            }
+        }
+
+        function toggleJobAccordion(element) {
+            const content = element.nextElementSibling;
+            const arrow = element.querySelector('.accordion-arrow');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                arrow.classList.remove('active');
+            } else {
+                content.classList.add('active');
+                arrow.classList.add('active');
+            }
+        }
+
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
